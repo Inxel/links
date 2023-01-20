@@ -25,6 +25,26 @@ function changeImage() {
     }
 }
 
+function getExperienceInYears() {
+    const experienceID = "ageDate";
+    const firstDate = new Date("2019-06-01");
+    const secondDate = new Date(Date.now());
+    const yearDifference = secondDate.getYear() - firstDate.getYear();
+    const monthDifference = secondDate.getMonth() - firstDate.getMonth();
+    if (yearDifference == 0) {
+        document.getElementById(experienceID).innerHTML = 1;
+    } else {
+        if (monthDifference > 0) {
+            document.getElementById(experienceID).innerHTML = yearDifference
+        } else if (monthDifference < 0) {
+            document.getElementById(experienceID).innerHTML = yearDifference - 1
+        } else {
+            const addendum = secondDate.getDate() >= firstDate.getDate() ? 0 : -1
+            document.getElementById(experienceID).innerHTML = yearDifference + addendum
+        }
+    }
+}
+
 
 // Immediately invoked function to set the theme on initial load
 (function () {
