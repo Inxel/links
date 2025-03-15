@@ -1,8 +1,17 @@
 /* Style Settings */
 
-@import url('https://fonts.googleapis.com/css?family=Product%20Sans:400,700&display=swap');
+@font-face {
+    font-family: 'Regular';
+    src: url('Comfortaa-Regular.ttf');
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('Comfortaa-Bold.ttf');
+}
+
 :root {
-    --font: 'Prodcut Sans', 'Product Sans', sans-serif;
+    --font-regular: 'Regular', sans-serif;
+    --font-bold: 'Bold', sans-serif;
 }
 
 html {
@@ -20,26 +29,61 @@ body {
     --color-main: #fff;
     --color-text: #fff;
     --color-secondary: #0f5a5e;
-/*    --color-secondary: #6a5acd;*/
 }
 
+/* unvisited link */
+a:link {
+  color: var(--color-text);
+}
+
+/* visited link */
+a:visited {
+    color: var(--color-text);
+}
+
+/* mouse over link */
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* selected link */
+a:active {
+    color: var(--color-secondary);
+}
 
 #Photo {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 30px auto 13px;
+    width: 120px;
+    height: 120px;
+    margin: 30px 0px 15px 0px;
     border-radius: 25%;
+    border: solid var(--color-main) 2px;
 }
 
 #Name {
     color: var(--color-text);
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: bold;
     display: block;
-    font-family: 'Product Sans';
+    font-family: var(--font-bold);
     width: 100%;
-    text-align: center;
+    margin: 15px 0px;
+}
+
+#Occupation {
+    color: var(--color-text);
+    font-size: 34px;
+    font-weight: bold;
+    display: block;
+    font-family: var(--font-bold);
+    width: 100%;
+    margin: 20px 0px 50px 0px;
+}
+
+#HeaderBlock {
+    max-width: 620px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
 }
 
 #title {
@@ -48,7 +92,7 @@ body {
     font-weight: 600;
     line-height: 1.25;
     display: block;
-    font-family: var(--font);
+    font-family: var(--font-regular);
     width: 100%;
     margin-top: 50px;
     text-align: center;
@@ -56,7 +100,7 @@ body {
 }
 
 #linksbutton {
-    max-width: 580px;
+    max-width: 620px;
     width: auto;
     display: block;
     margin: 27px auto;
@@ -68,7 +112,7 @@ body {
     font-weight: 600;
     line-height: 1.25;
     display: block;
-    font-family: var(--font);
+    font-family: var(--font-regular);
     width: 100%;
     margin: 40px 0px 20px 3px;
     text-align: left;
@@ -81,7 +125,7 @@ body {
     position: relative;
     background-color: rgba(255, 255, 255, 0.0 );
     color: var(--color-text);
-    font-family: var(--font);
+    font-family: var(--font-regular);
     text-align: center;
     margin-bottom: 8px;
     padding: 5px;
@@ -121,7 +165,7 @@ body {
     font-weight: 300;
     line-height: 1.25;
     display: block;
-    font-family: var(--font);
+    font-family: var(--font-regular);
     width: 100%;
     margin: 20px 0px;
     text-align: center;

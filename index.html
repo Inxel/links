@@ -2,7 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta charset="UTF-8">
-            <title>Artyom Zagoskin</title>
+            <title>Tyoma Zagoskin</title>
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/font-awesome.min.css">
             <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -24,79 +24,82 @@
             <meta property="og:image:height" content="502" >
     </head>
     <body>
-        <img id="Photo" src="assets/images/tyomazago.png" alt="Avatar">
-            <spam id="Name">
-                Hi there 👋
-                <br>
-                I'm Artyom Zagoskin
-            </spam>
+        <div id="HeaderBlock">
+        <img id="Photo" src="assets/images/tyomazago.png" alt="Avatar"></img>
+        <span id="Name">
+            Tyoma Zagoskin
+        </span>
+        <span id="Occupation">
+            Senior iOS Engineer @ <a href="https://tp.media/r?marker=323001&trs=133019&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank"> Aviasales </a>
+        </span>
+        </div>
 
-            <div id="linksbutton">
-                <spam id="linksblockheader">
-                    <p id="experience"></p>
-                    <script>
-                        const experienceID = "experience";
-                        const firstDate = new Date("2019-07-01");
-                        const secondDate = new Date(Date.now());
-                        const yearDifference = secondDate.getYear() - firstDate.getYear();
-                        const monthDifference = secondDate.getMonth() - firstDate.getMonth();
-                        var experiece = 3;
-                        if (yearDifference == 0) {
-                            experiece = 1;
+        <div id="linksbutton">
+            <span id="linksblockheader">
+                <p id="experience"></p>
+                <script>
+                    const experienceID = "experience";
+                    const firstDate = new Date("2019-07-01");
+                    const secondDate = new Date(Date.now());
+                    const yearDifference = secondDate.getYear() - firstDate.getYear();
+                    const monthDifference = secondDate.getMonth() - firstDate.getMonth();
+                    var experiece = 3;
+                    if (yearDifference == 0) {
+                        experiece = 1;
+                    } else {
+                        if (monthDifference > 0) {
+                            experiece = yearDifference;
+                        } else if (monthDifference < 0) {
+                            experiece = yearDifference - 1;
                         } else {
-                            if (monthDifference > 0) {
-                                experiece = yearDifference;
-                            } else if (monthDifference < 0) {
-                                experiece = yearDifference - 1;
-                            } else {
-                                const addendum = secondDate.getDate() >= firstDate.getDate() ? 0 : -1
-                                experiece = yearDifference + addendum;
-                            }
+                            const addendum = secondDate.getDate() >= firstDate.getDate() ? 0 : -1
+                            experiece = yearDifference + addendum;
                         }
+                    }
 
-                        document.getElementById(experienceID).innerHTML = ` iOS Engineer at Aviasales with ${experiece}+ years of experience`;
-                    </script>
-                </spam>
-                <a class="links" href="https://inxel.github.io/CV/">
-                    <img src="assets/images/cv.png" alt="cv" style="width: 40px; height: 40px;"> <p> CV </p>
-                </a>
-            </div>
+                    document.getElementById(experienceID).innerHTML = ` ${experiece}+ years of experience`;
+                </script>
+            </span>
+            <a class="links" href="https://inxel.github.io/CV/" target="_blank">
+                <img src="assets/images/cv.png" alt="cv" style="width: 40px; height: 40px;"> <p> CV </p>
+            </a>
+        </div>
 
-            <div id="linksbutton">
-                <spam id="linksblockheader"> ✦ Social networks </spam>
-                <a class="links" href="https://www.linkedin.com/in/artyomzagoskin/">
-                    <img src="assets/images/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;"> <p> LinkedIn </p>
-                </a>
-                <a class="links" href="https://github.com/Inxel">
-                    <img src="assets/images/GitHub.png" alt="GitHub" style="width: 40px; height: 40px;"> <p> GitHub </p>
-                </a>
-                <a class="links" href="https://medium.com/@tyomazago">
-                    <img src="assets/images/medium.png" alt="Medium" style="width: 40px; height: 40px;"> <p> Medium </p>
-                </a>
-                <a class="links" href="https://www.instagram.com/tyoma_zago/">
-                    <img src="assets/images/instagram.png" alt="Instagram" style="width: 40px; height: 40px;"> <p> Instagram </p>
-                </a>
-                <a class="links" href="https://twitter.com/MrZzzago">
-                    <img src="assets/images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;"> <p> Twitter </p>
-                </a>
-                <a class="links" href="https://www.facebook.com/artyom.zagoskin.54/">
-                    <img src="assets/images/Facebook.png" alt="Facebook" style="width: 40px; height: 40px;"> <p> Facebook </p>
-                </a>
-                <a class="links" href="https://habr.com/en/users/TyomaZago/posts/">
-                    <img src="assets/images/habr.png" alt="Habr" style="width: 40px; height: 40px;"> <p> Habr </p>
-                </a>
-            </div>
+        <div id="linksbutton">
+            <span id="linksblockheader"> ✦ Social networks </span>
+            <a class="links" href="https://www.linkedin.com/in/artyomzagoskin/" target="_blank">
+                <img src="assets/images/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;"> <p> LinkedIn </p>
+            </a>
+            <a class="links" href="https://github.com/Inxel" target="_blank">
+                <img src="assets/images/GitHub.png" alt="GitHub" style="width: 40px; height: 40px;"> <p> GitHub </p>
+            </a>
+            <a class="links" href="https://medium.com/@tyomazago" target="_blank">
+                <img src="assets/images/medium.png" alt="Medium" style="width: 40px; height: 40px;"> <p> Medium </p>
+            </a>
+            <a class="links" href="https://www.instagram.com/tyoma_zago/" target="_blank">
+                <img src="assets/images/instagram.png" alt="Instagram" style="width: 40px; height: 40px;"> <p> Instagram </p>
+            </a>
+            <a class="links" href="https://twitter.com/MrZzzago" target="_blank">
+                <img src="assets/images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;"> <p> Twitter </p>
+            </a>
+            <a class="links" href="https://www.facebook.com/artyom.zagoskin.54/" target="_blank">
+                <img src="assets/images/Facebook.png" alt="Facebook" style="width: 40px; height: 40px;"> <p> Facebook </p>
+            </a>
+            <a class="links" href="https://habr.com/en/users/TyomaZago/posts/" target="_blank">
+                <img src="assets/images/habr.png" alt="Habr" style="width: 40px; height: 40px;"> <p> Habr </p>
+            </a>
+        </div>
 
-            <div id="linksbutton">
-                <spam id="linksblockheader"> ✎ Connect w/ me: </spam>
-                <a class="links" href="https://www.t.me/tyoma_zago">
-                    <img src="assets/images/telegram.png" alt="Telegram" style="width: 40px; height: 40px;"> <p> Telegram </p>
-                </a>
-                <a class="links" href="mailto:artyzago@gmail.com">
-                    <img src="assets/images/Gmail.png" alt="Gmail" style="width: 40px; height: 40px;"> <p> Gmail </p>
-                </a>
-            </div>
+        <div id="linksbutton">
+            <span id="linksblockheader"> ✎ Connect w/ me: </span>
+            <a class="links" href="https://www.t.me/tyoma_zago" target="_blank">
+                <img src="assets/images/telegram.png" alt="Telegram" style="width: 40px; height: 40px;"> <p> Telegram </p>
+            </a>
+            <a class="links" href="mailto:artyzago@gmail.com" target="_blank">
+                <img src="assets/images/Gmail.png" alt="Gmail" style="width: 40px; height: 40px;"> <p> Gmail </p>
+            </a>
+        </div>
 
-            <spam id="footertext"> Made with ❤️ </spam>
+        <span id="footertext"> Made with ❤️ </span>
     </body>
 </html>
