@@ -32,33 +32,34 @@
         <span id="Occupation">
             Senior iOS Engineer @ <a href="https://tp.media/r?marker=323001&trs=133019&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank"> Aviasales </a>
         </span>
+        <span id = "Experience">
+        <script>
+            const experienceID = "Experience";
+            const firstDate = new Date("2019-07-01");
+            const secondDate = new Date(Date.now());
+            const yearDifference = secondDate.getYear() - firstDate.getYear();
+            const monthDifference = secondDate.getMonth() - firstDate.getMonth();
+            var experiece = 3;
+            if (yearDifference == 0) {
+                experiece = 1;
+            } else {
+                if (monthDifference > 0) {
+                    experiece = yearDifference;
+                } else if (monthDifference < 0) {
+                    experiece = yearDifference - 1;
+                } else {
+                    const addendum = secondDate.getDate() >= firstDate.getDate() ? 0 : -1
+                    experiece = yearDifference + addendum;
+                }
+            }
+
+            document.getElementById(experienceID).innerHTML = `${experiece}+ years of experience`;
+        </script>
+        </span>
         </div>
 
         <div id="linksbutton">
             <span id="linksblockheader">  CV </span>
-            <!--                <script>-->
-            <!--                    const experienceID = "experience";-->
-            <!--                    const firstDate = new Date("2019-07-01");-->
-            <!--                    const secondDate = new Date(Date.now());-->
-            <!--                    const yearDifference = secondDate.getYear() - firstDate.getYear();-->
-            <!--                    const monthDifference = secondDate.getMonth() - firstDate.getMonth();-->
-            <!--                    var experiece = 3;-->
-            <!--                    if (yearDifference == 0) {-->
-            <!--                        experiece = 1;-->
-            <!--                    } else {-->
-            <!--                        if (monthDifference > 0) {-->
-            <!--                            experiece = yearDifference;-->
-            <!--                        } else if (monthDifference < 0) {-->
-            <!--                            experiece = yearDifference - 1;-->
-            <!--                        } else {-->
-            <!--                            const addendum = secondDate.getDate() >= firstDate.getDate() ? 0 : -1-->
-            <!--                            experiece = yearDifference + addendum;-->
-            <!--                        }-->
-            <!--                    }-->
-            <!---->
-            <!--                    document.getElementById(experienceID).innerHTML = ` ${experiece}+ years of experience`;-->
-            <!--                </script>-->
-            <!--            </span>-->
             <div id="linksHorizontalBlock">
                 <a class="links" href="https://github.com/Inxel/cv/" target="_blank">
                     <img src="assets/images/cv.png" alt="cv" style="width: 40px; height: 40px;"> <p> Text </p>
